@@ -58,12 +58,6 @@
     <Compile Include="ComprasClientes.Designer.cs">
       <DependentUpon>ComprasClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBrochas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormBrochas.Designer.cs">
-      <DependentUpon>FormBrochas.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormEsponjas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,9 +126,6 @@
     <Compile Include="ReporteVentas.Designer.cs">
       <DependentUpon>ReporteVentas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormBrochas.resx">
-      <DependentUpon>FormBrochas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormEsponjas.resx">
       <DependentUpon>FormEsponjas.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +151,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\BL.Cosmeticos.Esponja.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.EsponjasBL.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.MaquillajeBL.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.Producto.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.ProductosBL.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.SeguridadBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -181,6 +178,9 @@
       <Project>{f99e410e-c866-42d3-a2bd-d701d7206919}</Project>
       <Name>BL.Cosmeticos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-10-05 at 11.07.37 AM.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
