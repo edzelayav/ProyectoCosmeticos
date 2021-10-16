@@ -92,34 +92,6 @@ namespace BL.Cosmeticos
         {
             return ListaProductos;
         }
-
-        public bool GuardarProducto(Producto producto) //Creando la clase guardar producto//
-        {
-            if (producto.Id == 0)
-            {
-                producto.Id = ListaProductos.Max(item => item.Id) + 1; //Busca el número mayor y le suma 1//
-            }
-            return true;
-        }
-
-        public void AgregarProducto()  //Creando la clase agregar nuevo producto//
-        {
-            var nuevoProducto = new Producto();
-            ListaProductos.Add(nuevoProducto);
-        }
-
-        public bool EliminarProducto(int id)  //Creando la función eliminar //
-        {
-            foreach (var producto in ListaProductos)
-            {
-                if (producto.Id == id)
-                {                                       //Ciclo para buscar el producto deseado y luego ser borrado//
-                    ListaProductos.Remove(producto);               //Lista para recorrer objetos//
-                    return true;
-                }
-            }
-            return false;
-        }
     }
     public class Producto
     {
@@ -133,4 +105,3 @@ namespace BL.Cosmeticos
     }
 
 }
-
