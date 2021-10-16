@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEsponjas));
+            System.Windows.Forms.Label activoLabel;
+            System.Windows.Forms.Label descripcionLabel;
+            System.Windows.Forms.Label existenciaLabel;
+            System.Windows.Forms.Label idLabel;
+            System.Windows.Forms.Label precioLabel;
             this.listaEsponjaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaEsponjaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -44,16 +49,19 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.listaEsponjaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.listaEsponjaDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.activoCheckBox = new System.Windows.Forms.CheckBox();
+            this.descripcionTextBox = new System.Windows.Forms.TextBox();
+            this.existenciaTextBox = new System.Windows.Forms.TextBox();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.precioTextBox = new System.Windows.Forms.TextBox();
+            activoLabel = new System.Windows.Forms.Label();
+            descripcionLabel = new System.Windows.Forms.Label();
+            existenciaLabel = new System.Windows.Forms.Label();
+            idLabel = new System.Windows.Forms.Label();
+            precioLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaEsponjaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaEsponjaBindingNavigator)).BeginInit();
             this.listaEsponjaBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaEsponjaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // listaEsponjaBindingSource
@@ -86,7 +94,7 @@
             this.listaEsponjaBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaEsponjaBindingNavigator.Name = "listaEsponjaBindingNavigator";
             this.listaEsponjaBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaEsponjaBindingNavigator.Size = new System.Drawing.Size(544, 25);
+            this.listaEsponjaBindingNavigator.Size = new System.Drawing.Size(569, 25);
             this.listaEsponjaBindingNavigator.TabIndex = 0;
             this.listaEsponjaBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -184,63 +192,107 @@
             this.listaEsponjaBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.listaEsponjaBindingNavigatorSaveItem.Text = "Guardar datos";
             // 
-            // listaEsponjaDataGridView
+            // activoLabel
             // 
-            this.listaEsponjaDataGridView.AutoGenerateColumns = false;
-            this.listaEsponjaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listaEsponjaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewCheckBoxColumn1});
-            this.listaEsponjaDataGridView.DataSource = this.listaEsponjaBindingSource;
-            this.listaEsponjaDataGridView.Location = new System.Drawing.Point(0, 28);
-            this.listaEsponjaDataGridView.Name = "listaEsponjaDataGridView";
-            this.listaEsponjaDataGridView.Size = new System.Drawing.Size(544, 357);
-            this.listaEsponjaDataGridView.TabIndex = 1;
+            activoLabel.AutoSize = true;
+            activoLabel.Location = new System.Drawing.Point(105, 195);
+            activoLabel.Name = "activoLabel";
+            activoLabel.Size = new System.Drawing.Size(40, 13);
+            activoLabel.TabIndex = 1;
+            activoLabel.Text = "Activo:";
             // 
-            // dataGridViewTextBoxColumn1
+            // activoCheckBox
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 50;
+            this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaEsponjaBindingSource, "Activo", true));
+            this.activoCheckBox.Location = new System.Drawing.Point(177, 190);
+            this.activoCheckBox.Name = "activoCheckBox";
+            this.activoCheckBox.Size = new System.Drawing.Size(138, 30);
+            this.activoCheckBox.TabIndex = 2;
+            this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // descripcionLabel
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descripcion";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 300;
+            descripcionLabel.AutoSize = true;
+            descripcionLabel.Location = new System.Drawing.Point(105, 115);
+            descripcionLabel.Name = "descripcionLabel";
+            descripcionLabel.Size = new System.Drawing.Size(66, 13);
+            descripcionLabel.TabIndex = 3;
+            descripcionLabel.Text = "Descripcion:";
             // 
-            // dataGridViewTextBoxColumn3
+            // descripcionTextBox
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Precio";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Precio";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 50;
+            this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEsponjaBindingSource, "Descripcion", true));
+            this.descripcionTextBox.Location = new System.Drawing.Point(177, 112);
+            this.descripcionTextBox.Name = "descripcionTextBox";
+            this.descripcionTextBox.Size = new System.Drawing.Size(301, 20);
+            this.descripcionTextBox.TabIndex = 4;
             // 
-            // dataGridViewTextBoxColumn4
+            // existenciaLabel
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Existencia";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Existencia";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 50;
+            existenciaLabel.AutoSize = true;
+            existenciaLabel.Location = new System.Drawing.Point(105, 167);
+            existenciaLabel.Name = "existenciaLabel";
+            existenciaLabel.Size = new System.Drawing.Size(58, 13);
+            existenciaLabel.TabIndex = 5;
+            existenciaLabel.Text = "Existencia:";
             // 
-            // dataGridViewCheckBoxColumn1
+            // existenciaTextBox
             // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.Width = 50;
+            this.existenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEsponjaBindingSource, "Existencia", true));
+            this.existenciaTextBox.Location = new System.Drawing.Point(177, 164);
+            this.existenciaTextBox.Name = "existenciaTextBox";
+            this.existenciaTextBox.Size = new System.Drawing.Size(301, 20);
+            this.existenciaTextBox.TabIndex = 6;
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(105, 89);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.TabIndex = 7;
+            idLabel.Text = "Id:";
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEsponjaBindingSource, "Id", true));
+            this.idTextBox.Location = new System.Drawing.Point(177, 86);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(301, 20);
+            this.idTextBox.TabIndex = 8;
+            // 
+            // precioLabel
+            // 
+            precioLabel.AutoSize = true;
+            precioLabel.Location = new System.Drawing.Point(105, 141);
+            precioLabel.Name = "precioLabel";
+            precioLabel.Size = new System.Drawing.Size(40, 13);
+            precioLabel.TabIndex = 9;
+            precioLabel.Text = "Precio:";
+            // 
+            // precioTextBox
+            // 
+            this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEsponjaBindingSource, "Precio", true));
+            this.precioTextBox.Location = new System.Drawing.Point(177, 138);
+            this.precioTextBox.Name = "precioTextBox";
+            this.precioTextBox.Size = new System.Drawing.Size(301, 20);
+            this.precioTextBox.TabIndex = 10;
             // 
             // FormEsponjas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 386);
-            this.Controls.Add(this.listaEsponjaDataGridView);
+            this.ClientSize = new System.Drawing.Size(569, 275);
+            this.Controls.Add(activoLabel);
+            this.Controls.Add(this.activoCheckBox);
+            this.Controls.Add(descripcionLabel);
+            this.Controls.Add(this.descripcionTextBox);
+            this.Controls.Add(existenciaLabel);
+            this.Controls.Add(this.existenciaTextBox);
+            this.Controls.Add(idLabel);
+            this.Controls.Add(this.idTextBox);
+            this.Controls.Add(precioLabel);
+            this.Controls.Add(this.precioTextBox);
             this.Controls.Add(this.listaEsponjaBindingNavigator);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormEsponjas";
@@ -251,7 +303,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.listaEsponjaBindingNavigator)).EndInit();
             this.listaEsponjaBindingNavigator.ResumeLayout(false);
             this.listaEsponjaBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaEsponjaDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,11 +324,10 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton listaEsponjaBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView listaEsponjaDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.CheckBox activoCheckBox;
+        private System.Windows.Forms.TextBox descripcionTextBox;
+        private System.Windows.Forms.TextBox existenciaTextBox;
+        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.TextBox precioTextBox;
     }
 }

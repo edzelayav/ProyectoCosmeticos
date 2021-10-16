@@ -139,19 +139,37 @@ namespace BL.Cosmeticos
 
 
         }
+
         public BindingList<Maquillaje> ObtenerMaquillaje()
         {
             return ListaMaquillaje;
         }
+
+        public bool GuardarMaquillaje(Maquillaje maquillaje)  //Creando la clase guardar producto//
+        {
+            if (maquillaje.Id == 0)
+            {
+                maquillaje.Id = ListaMaquillaje.Max(item => item.Id) + 1;   //Función para Busca el número mayor y le suma 1//
+            }
+            return true;
+        }
         public class Maquillaje
         {
-        public int Id { get; set; }
-        public string Descripcion { get; set; }
-        public double Precio { get; set; }
-        public int Existencia { get; set; }
-        public bool Activo { get; set; }
+            public int Id { get; set; }
+            public string Descripcion { get; set; }
+            public double Precio { get; set; }
+            public int Existencia { get; set; }
+            public bool Activo { get; set; }
 
 
-   }
-}
+        }
+
+
+
+
+    }
+
+    
+
+
 }

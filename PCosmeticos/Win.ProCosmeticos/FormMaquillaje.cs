@@ -28,5 +28,35 @@ namespace Win.ProCosmeticos
             
 
         }
+
+        private void descripcionTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void descripcionLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listaMaquillajeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            listaMaquillajeBindingSource.EndEdit();
+            var maquillaje = (Maquillaje) listaMaquillajeBindingSource.Current;  //enlace para boton de guardar producto maquillaje//
+
+            var resultado = _Maquillaje.GuardarMaquillaje(maquillaje);
+
+            if (resultado == true)
+            {
+                listaMaquillajeBindingSource.ResetBindings(false);  //Lo resetea porque hubo un cambio de valores en la lista//
+            }
+            else
+            {
+                MessageBox.Show("Error al guardar el producto Maquillaje"); // Muestra un mensaje de error//
+            }
+        
+
     }
 }
+}
+
