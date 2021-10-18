@@ -139,19 +139,96 @@ namespace BL.Cosmeticos
 
 
         }
+
         public BindingList<Maquillaje> ObtenerMaquillaje()
         {
             return ListaMaquillaje;
         }
+
+        public Resultado GuardarMaquillaje(Maquillaje maquillaje)  //Creando la clase guardar producto//
+        {
+            var resultado = Validar(maquillaje);
+            if (resultado.Exitoso == false)
+            {
+                return resultado;
+            }
+            if (maquillaje.Id == 0)
+            {
+                maquillaje.Id = ListaMaquillaje.Max(item => item.Id) + 1;   //Función para Busca el número mayor y le suma 1//
+            }
+            resultado.Exitoso = true;
+            return resultado;
+        }
+
+        public void AgregarMaquillaje()             //Creando la funcion agregar nuevo producto//
+        {
+            var nuevoMaquillaje = new Maquillaje();
+            ListaMaquillaje.Add(nuevoMaquillaje);
+        }
+
+        public bool EliminarMaquillaje(int id)   //Creando la función eliminar //
+        {
+            foreach (var maquilla in ListaMaquillaje)
+            {
+                if (maquilla.Id == id)
+                {                                       //Ciclo para buscar el producto deseado y luego ser borrado//
+                    ListaMaquillaje.Remove(maquilla);     //Lista para recorrer objetos//
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private Resultado Validar(Maquillaje maquillaje)  // Función para Validaciones//
+
+        {
+            var resultado = new Resultado();
+            resultado.Exitoso = true;
+
+            if (string.IsNullOrEmpty(maquillaje.Descripcion) == true)
+            {
+                resultado.Mensaje = "Ingrese una descripción";
+                resultado.Exitoso = false;
+            }
+            if (maquillaje.Existencia < 0)
+            {
+                resultado.Mensaje = "La existencia debe ser mayor que cero";
+                resultado.Exitoso = false;
+            }
+            if (maquillaje.Precio < 0)
+            {
+                resultado.Mensaje = "El precio debe ser mayor que cero";
+                resultado.Exitoso = false;
+            }
+
+            return resultado;
+        }
+
+
+
         public class Maquillaje
         {
-        public int Id { get; set; }
-        public string Descripcion { get; set; }
-        public double Precio { get; set; }
-        public int Existencia { get; set; }
-        public bool Activo { get; set; }
+            public int Id { get; set; }
+            public string Descripcion { get; set; }
+            public double Precio { get; set; }
+            public int Existencia { get; set; }
+            public bool Activo { get; set; }
 
 
-   }
-}
+        }
+
+        public class Resultado                     //Se creo la clase de Resultado//
+        {
+            public bool Exitoso { get; set; }
+            public string Mensaje { get; set; }
+        }
+
+
+
+
+    }
+
+    
+
+
 }

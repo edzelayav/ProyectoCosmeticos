@@ -109,6 +109,11 @@ namespace Win.ProCosmeticos
             reporteClientes.MdiParent = this;
             reporteClientes.Show();
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
     }
     
