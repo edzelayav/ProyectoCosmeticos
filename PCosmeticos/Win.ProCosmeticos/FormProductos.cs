@@ -42,6 +42,7 @@ namespace Win.ProCosmeticos
             {
                 listaProductosBindingSource.ResetBindings(false);   //Lo resetea porque hubo un cambio de valores en la lista//
                 DeshabilitarHabilitarBottones(true);
+                MessageBox.Show("Producto guardado");
             }
             else
             {

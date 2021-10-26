@@ -135,9 +135,6 @@ namespace BL.Cosmeticos
 
             ListaMaquillaje.Add(Maquillaje13);
 
-
-
-
         }
 
         public BindingList<Maquillaje> ObtenerMaquillaje()
