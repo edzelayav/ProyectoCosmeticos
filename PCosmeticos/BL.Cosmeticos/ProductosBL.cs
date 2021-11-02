@@ -10,12 +10,12 @@ namespace BL.Cosmeticos
 {
    public class ProductosBL
     {
-        Contextoproducto _contexto;
+        Contexto _contexto;
         public BindingList<Producto> ListaProductos { get; set; }
 
         public ProductosBL()
         {
-            _contexto = new Contextoproducto();
+            _contexto = new Contexto();
             ListaProductos = new BindingList<Producto>();
             
         }
@@ -32,11 +32,12 @@ namespace BL.Cosmeticos
         {
             var resultado = Validar(producto);
             if(resultado.Exitoso == false)
+
             {
                 return resultado;
             }
 
-            _contexto.SaveChanges(); 
+            _contexto.SaveChanges();
 
             resultado.Exitoso = true;
             return resultado;
@@ -84,8 +85,18 @@ namespace BL.Cosmeticos
                 resultado.Mensaje = "El precio debe ser mayor que cero";
                 resultado.Exitoso = false;
             }
+            if (producto.TipoId == 0)
+            {
+                resultado.Mensaje = "Por Favor, Seleccione un tipo";
+                resultado.Exitoso = false;
+            }
+            if (producto.CategoriaId == 0)
+            {
+                resultado.Mensaje = "Por Favor, Seleccione una categoria";
+                resultado.Exitoso = false;
+            }
 
-            return resultado;
+                return resultado;
         }
     }
     public class Producto
@@ -94,7 +105,17 @@ namespace BL.Cosmeticos
         public string Descripcion { get; set; }
         public double Precio { get; set; }
         public int Existencia { get; set; }
+        public int CategoriaId { get; set; }
+        public Categoria Categoria { get; set; }
+        public int TipoId { get; set; }
+        public Tipo Tipo { get; set; }
+        public byte[] Foto { get; set; }
         public bool Activo { get; set; }
+
+        public Producto()
+        {
+            Activo = true;
+        }
 
     }
 

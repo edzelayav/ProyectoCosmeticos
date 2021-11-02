@@ -113,7 +113,7 @@
             // 
             // listaMaquillajeBindingSource
             // 
-            this.listaMaquillajeBindingSource.DataSource = typeof(BL.Cosmeticos.maquillaje.Maquillaje);
+            this.listaMaquillajeBindingSource.DataSource = typeof(BL.Cosmeticos.maquillaje);
             // 
             // listaMaquillajeBindingNavigator
             // 

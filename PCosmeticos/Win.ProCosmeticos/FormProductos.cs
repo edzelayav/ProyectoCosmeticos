@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,11 +15,26 @@ namespace Win.ProCosmeticos
     public partial class FormProductos : Form
     {
         ProductosBL _productos;
+        TiposBL _tiposBL;
+        CategoriasBL _categoriasBL;
+
+
+  
         public FormProductos()
         {
             InitializeComponent();
             _productos = new ProductosBL();
             listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
+
+            _categoriasBL = new CategoriasBL();
+            listaCategoriasBindingSource.DataSource = _categoriasBL.ObtenerCategorias();
+    
+         
+
+            _tiposBL = new TiposBL();
+            listaTiposBindingSource.DataSource = _tiposBL.ObtenerTipos();
+
+
         }
 
         private void listaProductosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -36,6 +52,14 @@ namespace Win.ProCosmeticos
             listaProductosBindingSource.EndEdit();  //esto es para que finalice la edicion en la funcion de guardar producto//
             var producto = (Producto)listaProductosBindingSource.Current; //enlace para boton de guardar producto//
 
+            if (fotoPictureBox.Image  !=null)
+            {
+                producto.Foto = Program.imageToByteArray(fotoPictureBox.Image);
+            }
+            else
+            {
+                producto.Foto = null;
+            }
             var resultado = _productos.GuardarProducto(producto);
 
             if (resultado.Exitoso == true)           //Si el resultadoe es verdadero
@@ -105,5 +129,49 @@ namespace Win.ProCosmeticos
             DeshabilitarHabilitarBottones(true);
             Eliminar(0);
         }
+
+        private void fotoPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var producto = (Producto)listaProductosBindingSource.Current; //enlace para boton de guardar producto//
+
+            if (producto != null)
+            {
+                openFileDialog1.ShowDialog();
+                var archivo = openFileDialog1.FileName;
+
+                if (archivo != "")
+                {
+                    var fileInfo = new FileInfo(archivo);
+                    var fileStream = fileInfo.OpenRead();
+
+                    fotoPictureBox.Image = Image.FromStream(fileStream);
+
+                }
+            }
+           else
+            {
+                MessageBox.Show("Cree un producto antes de asignarle una imagen");
+
+            } 
+                
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            fotoPictureBox.Image = null;
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }
+ 
