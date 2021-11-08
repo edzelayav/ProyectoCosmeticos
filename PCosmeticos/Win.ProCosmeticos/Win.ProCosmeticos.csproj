@@ -76,6 +76,12 @@
     <Compile Include="FormEsponjas.Designer.cs">
       <DependentUpon>FormEsponjas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFactura.Designer.cs">
+      <DependentUpon>FormFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,17 +106,11 @@
     <Compile Include="FormProductos.Designer.cs">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="IdClientes.cs">
+    <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IdClientes.Designer.cs">
-      <DependentUpon>IdClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NombreClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NombreClientes.Designer.cs">
-      <DependentUpon>NombreClientes.cs</DependentUpon>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="NombreVendedores.cs">
       <SubType>Form</SubType>
@@ -141,6 +141,9 @@
     <EmbeddedResource Include="FormEsponjas.resx">
       <DependentUpon>FormEsponjas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormFactura.resx">
+      <DependentUpon>FormFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +156,9 @@
     <EmbeddedResource Include="FormProductos.resx">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -164,13 +170,25 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.Categoria.datasource" />
     <None Include="Properties\DataSources\BL.Cosmeticos.CategoriasBL.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.Cliente.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.ClientesBL.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.Contexto.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.DatosdeInicio.datasource" />
     <None Include="Properties\DataSources\BL.Cosmeticos.Esponja.datasource" />
     <None Include="Properties\DataSources\BL.Cosmeticos.EsponjasBL.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.FacturaBL.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.MaquillajeBL+Maquillaje.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.MaquillajeBL+Resultado.datasource" />
     <None Include="Properties\DataSources\BL.Cosmeticos.MaquillajeBL.datasource" />
     <None Include="Properties\DataSources\BL.Cosmeticos.Producto.datasource" />
     <None Include="Properties\DataSources\BL.Cosmeticos.ProductosBL.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.Resultad.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.Resultado.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.SeguridadBL+Usuario.datasource" />
     <None Include="Properties\DataSources\BL.Cosmeticos.SeguridadBL.datasource" />
+    <None Include="Properties\DataSources\BL.Cosmeticos.Tipo.datasource" />
     <None Include="Properties\DataSources\BL.Cosmeticos.TiposBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -196,6 +214,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WhatsApp Image 2021-10-05 at 11.07.37 AM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %284%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %286%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textura-marmol-dorado-rosado_125540-836.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1187649613-170667a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textura-marmol-dorado-rosado_125540-8361.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo-textura.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
