@@ -47,6 +47,7 @@
             this.reporteDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -179,7 +180,8 @@
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reporteDeProductosToolStripMenuItem,
             this.reporteDeVentasToolStripMenuItem,
-            this.reporteClientesToolStripMenuItem});
+            this.reporteClientesToolStripMenuItem,
+            this.reporteDeFacturasToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -204,6 +206,13 @@
             this.reporteClientesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.reporteClientesToolStripMenuItem.Text = "Reporte Clientes";
             this.reporteClientesToolStripMenuItem.Click += new System.EventHandler(this.reporteClientesToolStripMenuItem_Click);
+            // 
+            // reporteDeFacturasToolStripMenuItem
+            // 
+            this.reporteDeFacturasToolStripMenuItem.Name = "reporteDeFacturasToolStripMenuItem";
+            this.reporteDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.reporteDeFacturasToolStripMenuItem.Text = "Reporte de Facturas";
+            this.reporteDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeFacturasToolStripMenuItem_Click);
             // 
             // FormMenu
             // 
@@ -247,5 +256,6 @@
         private System.Windows.Forms.ToolStripMenuItem reporteClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeFacturasToolStripMenuItem;
     }
 }

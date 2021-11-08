@@ -89,18 +89,10 @@ namespace Win.ProCosmeticos
             nombreVendedor.Show();
         }
 
-        private void reporteDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var reporteProductos = new ReporteProductos();
-            reporteProductos.MdiParent = this;
-            reporteProductos.Show();
-        }
-
+        
         private void reporteDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var reporteVentas = new ReporteVentas();
-            reporteVentas.MdiParent = this;
-            reporteVentas.Show();
+           
         }
 
         private void reporteClientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -126,6 +118,22 @@ namespace Win.ProCosmeticos
             formFactura.MdiParent = this;
             formFactura.Show();
         }
+
+        private void reporteDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteProductos = new FormReporteProductos();
+            formReporteProductos.MdiParent = this;
+            formReporteProductos.Show();
+        }
+
+        private void reporteDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteFacturas = new FormReporteFacturas();
+            formReporteFacturas.MdiParent = this;
+            formReporteFacturas.Show();
+        }
     }
-    }
+}
+
+
     
