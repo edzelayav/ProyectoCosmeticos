@@ -34,19 +34,16 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cosmeticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosLimpiezaFacialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.maquillajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.esponjasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.idDeClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nombreDeVendedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasTotalesVendedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeVendedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,8 +90,6 @@
             // 
             this.cosmeticosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.productosLimpiezaFacialToolStripMenuItem,
-            this.maquillajeToolStripMenuItem,
-            this.esponjasToolStripMenuItem,
             this.facturaToolStripMenuItem});
             this.cosmeticosToolStripMenuItem.Name = "cosmeticosToolStripMenuItem";
             this.cosmeticosToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
@@ -103,28 +98,14 @@
             // productosLimpiezaFacialToolStripMenuItem
             // 
             this.productosLimpiezaFacialToolStripMenuItem.Name = "productosLimpiezaFacialToolStripMenuItem";
-            this.productosLimpiezaFacialToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.productosLimpiezaFacialToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.productosLimpiezaFacialToolStripMenuItem.Text = "Productos ";
             this.productosLimpiezaFacialToolStripMenuItem.Click += new System.EventHandler(this.productosLimpiezaFacialToolStripMenuItem_Click);
-            // 
-            // maquillajeToolStripMenuItem
-            // 
-            this.maquillajeToolStripMenuItem.Name = "maquillajeToolStripMenuItem";
-            this.maquillajeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.maquillajeToolStripMenuItem.Text = "Maquillaje";
-            this.maquillajeToolStripMenuItem.Click += new System.EventHandler(this.maquillajeToolStripMenuItem_Click);
-            // 
-            // esponjasToolStripMenuItem
-            // 
-            this.esponjasToolStripMenuItem.Name = "esponjasToolStripMenuItem";
-            this.esponjasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.esponjasToolStripMenuItem.Text = "Esponjas ";
-            this.esponjasToolStripMenuItem.Click += new System.EventHandler(this.esponjasToolStripMenuItem_Click);
             // 
             // facturaToolStripMenuItem
             // 
             this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
-            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.facturaToolStripMenuItem.Text = "Factura";
             this.facturaToolStripMenuItem.Click += new System.EventHandler(this.facturaToolStripMenuItem_Click);
             // 
@@ -147,9 +128,7 @@
             // vendedorToolStripMenuItem
             // 
             this.vendedorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nombreDeVendedorToolStripMenuItem,
-            this.cToolStripMenuItem,
-            this.ventasTotalesVendedorToolStripMenuItem});
+            this.nombreDeVendedorToolStripMenuItem});
             this.vendedorToolStripMenuItem.Name = "vendedorToolStripMenuItem";
             this.vendedorToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.vendedorToolStripMenuItem.Text = "Vendedor";
@@ -157,29 +136,17 @@
             // nombreDeVendedorToolStripMenuItem
             // 
             this.nombreDeVendedorToolStripMenuItem.Name = "nombreDeVendedorToolStripMenuItem";
-            this.nombreDeVendedorToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.nombreDeVendedorToolStripMenuItem.Text = "Codigo Vendedor";
+            this.nombreDeVendedorToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.nombreDeVendedorToolStripMenuItem.Text = "Información de Vendedor";
             this.nombreDeVendedorToolStripMenuItem.Click += new System.EventHandler(this.nombreDeVendedorToolStripMenuItem_Click);
-            // 
-            // cToolStripMenuItem
-            // 
-            this.cToolStripMenuItem.Name = "cToolStripMenuItem";
-            this.cToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.cToolStripMenuItem.Text = "Nombre Vendedor";
-            this.cToolStripMenuItem.Click += new System.EventHandler(this.cToolStripMenuItem_Click);
-            // 
-            // ventasTotalesVendedorToolStripMenuItem
-            // 
-            this.ventasTotalesVendedorToolStripMenuItem.Name = "ventasTotalesVendedorToolStripMenuItem";
-            this.ventasTotalesVendedorToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.ventasTotalesVendedorToolStripMenuItem.Text = "Ventas Totales Vendedor";
             // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reporteDeProductosToolStripMenuItem,
             this.reporteClientesToolStripMenuItem,
-            this.reporteDeFacturasToolStripMenuItem});
+            this.reporteDeFacturasToolStripMenuItem,
+            this.reporteDeVendedorToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -204,6 +171,13 @@
             this.reporteDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.reporteDeFacturasToolStripMenuItem.Text = "Reporte de Facturas";
             this.reporteDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeFacturasToolStripMenuItem_Click);
+            // 
+            // reporteDeVendedorToolStripMenuItem
+            // 
+            this.reporteDeVendedorToolStripMenuItem.Name = "reporteDeVendedorToolStripMenuItem";
+            this.reporteDeVendedorToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.reporteDeVendedorToolStripMenuItem.Text = "Reporte de Vendedor";
+            this.reporteDeVendedorToolStripMenuItem.Click += new System.EventHandler(this.reporteDeVendedorToolStripMenuItem_Click);
             // 
             // FormMenu
             // 
@@ -233,19 +207,16 @@
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cosmeticosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosLimpiezaFacialToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem maquillajeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem esponjasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem idDeClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vendedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nombreDeVendedorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ventasTotalesVendedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteDeProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteDeFacturasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeVendedorToolStripMenuItem;
     }
 }

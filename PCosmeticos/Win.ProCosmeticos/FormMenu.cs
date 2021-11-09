@@ -40,17 +40,13 @@ namespace Win.ProCosmeticos
 
         private void maquillajeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formMaquillaje = new FormMaquillaje();
-            formMaquillaje.MdiParent = this;
-            formMaquillaje.Show();
+
         }
 
-        
+
         private void esponjasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formEsponjas = new FormEsponjas();
-            formEsponjas.MdiParent = this;
-            formEsponjas.Show();
+
 
         }
 
@@ -63,7 +59,7 @@ namespace Win.ProCosmeticos
 
         private void idDeClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var idClintes = new Clientes ();
+            var idClintes = new Clientes();
             idClintes.MdiParent = this;
             idClintes.Show();
         }
@@ -75,27 +71,19 @@ namespace Win.ProCosmeticos
             nombreClientes.Show();
         }
 
-        private void nombreDeVendedorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var idVendedor = new CodigoVendedor();
-            idVendedor.MdiParent = this;
-            idVendedor.Show();
-    }
 
         private void cToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var nombreVendedor = new NombreVendedores();
-            nombreVendedor.MdiParent = this;
-            nombreVendedor.Show();
+
         }
 
-        
+
         private void reporteDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
 
-        
+
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -132,6 +120,20 @@ namespace Win.ProCosmeticos
             var formReporteClientes = new FormReporteClientes();
             formReporteClientes.MdiParent = this;
             formReporteClientes.Show();
+        }
+
+        private void nombreDeVendedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formVendedor = new FormVendedor();
+            formVendedor.MdiParent = this;
+            formVendedor.Show();
+        }
+
+        private void reporteDeVendedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteVendedor = new FormReporteVendedor();
+            formReporteVendedor.MdiParent = this;
+            formReporteVendedor.Show();
         }
     }
 }

@@ -32,6 +32,7 @@ namespace BL.Cosmeticos
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Factura> Facturas { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Vendedor> Vendedor { get; set; }
 
     }
 

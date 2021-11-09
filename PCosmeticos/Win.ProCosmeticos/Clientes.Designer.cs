@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             System.Windows.Forms.Label activoLabel;
             System.Windows.Forms.Label celularLabel;
             System.Windows.Forms.Label direccionLabel;
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nombreLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.listaClientesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.listaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -64,6 +64,51 @@
             this.listaClientesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // activoLabel
+            // 
+            activoLabel.AutoSize = true;
+            activoLabel.Location = new System.Drawing.Point(94, 188);
+            activoLabel.Name = "activoLabel";
+            activoLabel.Size = new System.Drawing.Size(62, 16);
+            activoLabel.TabIndex = 1;
+            activoLabel.Text = "Activo:";
+            // 
+            // celularLabel
+            // 
+            celularLabel.AutoSize = true;
+            celularLabel.Location = new System.Drawing.Point(94, 154);
+            celularLabel.Name = "celularLabel";
+            celularLabel.Size = new System.Drawing.Size(62, 16);
+            celularLabel.TabIndex = 3;
+            celularLabel.Text = "celular:";
+            // 
+            // direccionLabel
+            // 
+            direccionLabel.AutoSize = true;
+            direccionLabel.Location = new System.Drawing.Point(94, 122);
+            direccionLabel.Name = "direccionLabel";
+            direccionLabel.Size = new System.Drawing.Size(84, 16);
+            direccionLabel.TabIndex = 5;
+            direccionLabel.Text = "Direccion:";
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(94, 58);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(28, 16);
+            idLabel.TabIndex = 7;
+            idLabel.Text = "Id:";
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(94, 90);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(71, 16);
+            nombreLabel.TabIndex = 9;
+            nombreLabel.Text = "Nombre:";
             // 
             // listaClientesBindingNavigator
             // 
@@ -210,15 +255,6 @@
             this.toolStripButtonCancelar.Visible = false;
             this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
             // 
-            // activoLabel
-            // 
-            activoLabel.AutoSize = true;
-            activoLabel.Location = new System.Drawing.Point(94, 188);
-            activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(62, 16);
-            activoLabel.TabIndex = 1;
-            activoLabel.Text = "Activo:";
-            // 
             // activoCheckBox
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaClientesBindingSource, "Activo", true));
@@ -228,15 +264,6 @@
             this.activoCheckBox.TabIndex = 4;
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
-            // celularLabel
-            // 
-            celularLabel.AutoSize = true;
-            celularLabel.Location = new System.Drawing.Point(94, 154);
-            celularLabel.Name = "celularLabel";
-            celularLabel.Size = new System.Drawing.Size(62, 16);
-            celularLabel.TabIndex = 3;
-            celularLabel.Text = "celular:";
-            // 
             // celularTextBox
             // 
             this.celularTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "celular", true));
@@ -244,15 +271,6 @@
             this.celularTextBox.Name = "celularTextBox";
             this.celularTextBox.Size = new System.Drawing.Size(256, 26);
             this.celularTextBox.TabIndex = 3;
-            // 
-            // direccionLabel
-            // 
-            direccionLabel.AutoSize = true;
-            direccionLabel.Location = new System.Drawing.Point(94, 122);
-            direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(84, 16);
-            direccionLabel.TabIndex = 5;
-            direccionLabel.Text = "Direccion:";
             // 
             // direccionTextBox
             // 
@@ -262,15 +280,6 @@
             this.direccionTextBox.Size = new System.Drawing.Size(256, 26);
             this.direccionTextBox.TabIndex = 2;
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(94, 58);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(28, 16);
-            idLabel.TabIndex = 7;
-            idLabel.Text = "Id:";
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Id", true));
@@ -278,15 +287,6 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(84, 26);
             this.idTextBox.TabIndex = 8;
-            // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(94, 90);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(71, 16);
-            nombreLabel.TabIndex = 9;
-            nombreLabel.Text = "Nombre:";
             // 
             // nombreTextBox
             // 

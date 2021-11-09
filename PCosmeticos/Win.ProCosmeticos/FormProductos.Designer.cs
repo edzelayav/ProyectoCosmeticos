@@ -444,7 +444,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Win.ProCosmeticos.Properties.Resources.istockphoto_1187649613_170667a;
+            this.BackgroundImage = global::Win.ProCosmeticos.Properties.Resources.fr;
             this.ClientSize = new System.Drawing.Size(866, 438);
             this.Controls.Add(categoriaIdLabel);
             this.Controls.Add(this.categoriaIdComboBox);

@@ -104,7 +104,13 @@ namespace BL.Cosmeticos
         public string Direccion { get; set; }
         public bool Activo { get; set; }
 
-    }
+        public Cliente()
+        {
+            Activo = true;
+        }
+
+    
+}
     public class resultado             //Se creo la clase de Resultado//
     {
         public bool Exitoso { get; set; }

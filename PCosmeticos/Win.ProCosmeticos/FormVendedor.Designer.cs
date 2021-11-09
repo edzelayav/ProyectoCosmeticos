@@ -1,6 +1,6 @@
 ﻿namespace Win.ProCosmeticos
 {
-    partial class FormMaquillaje
+    partial class FormVendedor
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label activoLabel;
-            System.Windows.Forms.Label descripcionLabel;
-            System.Windows.Forms.Label existenciaLabel;
+            System.Windows.Forms.Label areaLabel;
+            System.Windows.Forms.Label cargoLabel;
             System.Windows.Forms.Label idLabel;
-            System.Windows.Forms.Label precioLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMaquillaje));
-            this.listaMaquillajeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listaMaquillajeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            System.Windows.Forms.Label nombreLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVendedor));
+            this.listaVendedorBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.listaVendedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -48,80 +48,80 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.listaMaquillajeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.listaVendedorBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
-            this.descripcionTextBox = new System.Windows.Forms.TextBox();
-            this.existenciaTextBox = new System.Windows.Forms.TextBox();
+            this.areaTextBox = new System.Windows.Forms.TextBox();
+            this.cargoTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
-            this.precioTextBox = new System.Windows.Forms.TextBox();
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
             activoLabel = new System.Windows.Forms.Label();
-            descripcionLabel = new System.Windows.Forms.Label();
-            existenciaLabel = new System.Windows.Forms.Label();
+            areaLabel = new System.Windows.Forms.Label();
+            cargoLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
-            precioLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.listaMaquillajeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaMaquillajeBindingNavigator)).BeginInit();
-            this.listaMaquillajeBindingNavigator.SuspendLayout();
+            nombreLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.listaVendedorBindingNavigator)).BeginInit();
+            this.listaVendedorBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaVendedorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // activoLabel
             // 
             activoLabel.AutoSize = true;
-            activoLabel.Location = new System.Drawing.Point(83, 172);
+            activoLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            activoLabel.Location = new System.Drawing.Point(58, 178);
             activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(40, 13);
+            activoLabel.Size = new System.Drawing.Size(62, 16);
             activoLabel.TabIndex = 1;
             activoLabel.Text = "Activo:";
             // 
-            // descripcionLabel
+            // areaLabel
             // 
-            descripcionLabel.AutoSize = true;
-            descripcionLabel.Location = new System.Drawing.Point(83, 92);
-            descripcionLabel.Name = "descripcionLabel";
-            descripcionLabel.Size = new System.Drawing.Size(66, 13);
-            descripcionLabel.TabIndex = 3;
-            descripcionLabel.Text = "Descripcion:";
-            descripcionLabel.Click += new System.EventHandler(this.descripcionLabel_Click);
+            areaLabel.AutoSize = true;
+            areaLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            areaLabel.Location = new System.Drawing.Point(58, 115);
+            areaLabel.Name = "areaLabel";
+            areaLabel.Size = new System.Drawing.Size(48, 16);
+            areaLabel.TabIndex = 3;
+            areaLabel.Text = "Area:";
             // 
-            // existenciaLabel
+            // cargoLabel
             // 
-            existenciaLabel.AutoSize = true;
-            existenciaLabel.Location = new System.Drawing.Point(83, 144);
-            existenciaLabel.Name = "existenciaLabel";
-            existenciaLabel.Size = new System.Drawing.Size(58, 13);
-            existenciaLabel.TabIndex = 5;
-            existenciaLabel.Text = "Existencia:";
+            cargoLabel.AutoSize = true;
+            cargoLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cargoLabel.Location = new System.Drawing.Point(58, 141);
+            cargoLabel.Name = "cargoLabel";
+            cargoLabel.Size = new System.Drawing.Size(57, 16);
+            cargoLabel.TabIndex = 5;
+            cargoLabel.Text = "Cargo:";
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(83, 66);
+            idLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(58, 63);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 7;
+            idLabel.Size = new System.Drawing.Size(28, 16);
+            idLabel.TabIndex = 9;
             idLabel.Text = "Id:";
             // 
-            // precioLabel
+            // nombreLabel
             // 
-            precioLabel.AutoSize = true;
-            precioLabel.Location = new System.Drawing.Point(83, 118);
-            precioLabel.Name = "precioLabel";
-            precioLabel.Size = new System.Drawing.Size(40, 13);
-            precioLabel.TabIndex = 9;
-            precioLabel.Text = "Precio:";
+            nombreLabel.AutoSize = true;
+            nombreLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreLabel.Location = new System.Drawing.Point(58, 89);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(71, 16);
+            nombreLabel.TabIndex = 11;
+            nombreLabel.Text = "Nombre:";
             // 
-            // listaMaquillajeBindingSource
+            // listaVendedorBindingNavigator
             // 
-            this.listaMaquillajeBindingSource.DataSource = typeof(BL.Cosmeticos.maquillaje);
-            // 
-            // listaMaquillajeBindingNavigator
-            // 
-            this.listaMaquillajeBindingNavigator.AddNewItem = null;
-            this.listaMaquillajeBindingNavigator.BindingSource = this.listaMaquillajeBindingSource;
-            this.listaMaquillajeBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.listaMaquillajeBindingNavigator.DeleteItem = null;
-            this.listaMaquillajeBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listaVendedorBindingNavigator.AddNewItem = null;
+            this.listaVendedorBindingNavigator.BindingSource = this.listaVendedorBindingSource;
+            this.listaVendedorBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.listaVendedorBindingNavigator.DeleteItem = null;
+            this.listaVendedorBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -133,18 +133,22 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.listaMaquillajeBindingNavigatorSaveItem,
+            this.listaVendedorBindingNavigatorSaveItem,
             this.toolStripButtonCancelar});
-            this.listaMaquillajeBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.listaMaquillajeBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.listaMaquillajeBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.listaMaquillajeBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.listaMaquillajeBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.listaMaquillajeBindingNavigator.Name = "listaMaquillajeBindingNavigator";
-            this.listaMaquillajeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaMaquillajeBindingNavigator.Size = new System.Drawing.Size(584, 25);
-            this.listaMaquillajeBindingNavigator.TabIndex = 0;
-            this.listaMaquillajeBindingNavigator.Text = "bindingNavigator1";
+            this.listaVendedorBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.listaVendedorBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.listaVendedorBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.listaVendedorBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.listaVendedorBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.listaVendedorBindingNavigator.Name = "listaVendedorBindingNavigator";
+            this.listaVendedorBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.listaVendedorBindingNavigator.Size = new System.Drawing.Size(501, 25);
+            this.listaVendedorBindingNavigator.TabIndex = 0;
+            this.listaVendedorBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // listaVendedorBindingSource
+            // 
+            this.listaVendedorBindingSource.DataSource = typeof(BL.Cosmeticos.Vendedor);
             // 
             // bindingNavigatorCountItem
             // 
@@ -233,14 +237,14 @@
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
-            // listaMaquillajeBindingNavigatorSaveItem
+            // listaVendedorBindingNavigatorSaveItem
             // 
-            this.listaMaquillajeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.listaMaquillajeBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listaMaquillajeBindingNavigatorSaveItem.Image")));
-            this.listaMaquillajeBindingNavigatorSaveItem.Name = "listaMaquillajeBindingNavigatorSaveItem";
-            this.listaMaquillajeBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.listaMaquillajeBindingNavigatorSaveItem.Text = "Guardar datos";
-            this.listaMaquillajeBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaMaquillajeBindingNavigatorSaveItem_Click);
+            this.listaVendedorBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.listaVendedorBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listaVendedorBindingNavigatorSaveItem.Image")));
+            this.listaVendedorBindingNavigatorSaveItem.Name = "listaVendedorBindingNavigatorSaveItem";
+            this.listaVendedorBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.listaVendedorBindingNavigatorSaveItem.Text = "Guardar datos";
+            this.listaVendedorBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaVendedorBindingNavigatorSaveItem_Click);
             // 
             // toolStripButtonCancelar
             // 
@@ -255,71 +259,68 @@
             // 
             // activoCheckBox
             // 
-            this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaMaquillajeBindingSource, "Activo", true));
-            this.activoCheckBox.Location = new System.Drawing.Point(155, 167);
+            this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaVendedorBindingSource, "Activo", true));
+            this.activoCheckBox.Location = new System.Drawing.Point(140, 172);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(104, 24);
             this.activoCheckBox.TabIndex = 2;
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
-            // descripcionTextBox
+            // areaTextBox
             // 
-            this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaMaquillajeBindingSource, "Descripcion", true));
-            this.descripcionTextBox.Location = new System.Drawing.Point(155, 89);
-            this.descripcionTextBox.Name = "descripcionTextBox";
-            this.descripcionTextBox.Size = new System.Drawing.Size(341, 20);
-            this.descripcionTextBox.TabIndex = 4;
-            this.descripcionTextBox.TextChanged += new System.EventHandler(this.descripcionTextBox_TextChanged);
+            this.areaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaVendedorBindingSource, "Area", true));
+            this.areaTextBox.Location = new System.Drawing.Point(140, 111);
+            this.areaTextBox.Name = "areaTextBox";
+            this.areaTextBox.Size = new System.Drawing.Size(261, 20);
+            this.areaTextBox.TabIndex = 4;
             // 
-            // existenciaTextBox
+            // cargoTextBox
             // 
-            this.existenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaMaquillajeBindingSource, "Existencia", true));
-            this.existenciaTextBox.Location = new System.Drawing.Point(155, 141);
-            this.existenciaTextBox.Name = "existenciaTextBox";
-            this.existenciaTextBox.Size = new System.Drawing.Size(341, 20);
-            this.existenciaTextBox.TabIndex = 6;
+            this.cargoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaVendedorBindingSource, "Cargo", true));
+            this.cargoTextBox.Location = new System.Drawing.Point(140, 137);
+            this.cargoTextBox.Name = "cargoTextBox";
+            this.cargoTextBox.Size = new System.Drawing.Size(261, 20);
+            this.cargoTextBox.TabIndex = 6;
             // 
             // idTextBox
             // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaMaquillajeBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(155, 63);
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaVendedorBindingSource, "Id", true));
+            this.idTextBox.Location = new System.Drawing.Point(140, 59);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(341, 20);
-            this.idTextBox.TabIndex = 8;
+            this.idTextBox.Size = new System.Drawing.Size(261, 20);
+            this.idTextBox.TabIndex = 10;
             // 
-            // precioTextBox
+            // nombreTextBox
             // 
-            this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaMaquillajeBindingSource, "Precio", true));
-            this.precioTextBox.Location = new System.Drawing.Point(155, 115);
-            this.precioTextBox.Name = "precioTextBox";
-            this.precioTextBox.Size = new System.Drawing.Size(341, 20);
-            this.precioTextBox.TabIndex = 10;
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaVendedorBindingSource, "Nombre", true));
+            this.nombreTextBox.Location = new System.Drawing.Point(140, 85);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(261, 20);
+            this.nombreTextBox.TabIndex = 12;
             // 
-            // FormMaquillaje
+            // FormVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 258);
+            this.BackgroundImage = global::Win.ProCosmeticos.Properties.Resources.fr;
+            this.ClientSize = new System.Drawing.Size(501, 299);
             this.Controls.Add(activoLabel);
             this.Controls.Add(this.activoCheckBox);
-            this.Controls.Add(descripcionLabel);
-            this.Controls.Add(this.descripcionTextBox);
-            this.Controls.Add(existenciaLabel);
-            this.Controls.Add(this.existenciaTextBox);
+            this.Controls.Add(areaLabel);
+            this.Controls.Add(this.areaTextBox);
+            this.Controls.Add(cargoLabel);
+            this.Controls.Add(this.cargoTextBox);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
-            this.Controls.Add(precioLabel);
-            this.Controls.Add(this.precioTextBox);
-            this.Controls.Add(this.listaMaquillajeBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FormMaquillaje";
-            this.Text = "Maquillaje";
-            this.Load += new System.EventHandler(this.FormMaquillaje_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.listaMaquillajeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaMaquillajeBindingNavigator)).EndInit();
-            this.listaMaquillajeBindingNavigator.ResumeLayout(false);
-            this.listaMaquillajeBindingNavigator.PerformLayout();
+            this.Controls.Add(nombreLabel);
+            this.Controls.Add(this.nombreTextBox);
+            this.Controls.Add(this.listaVendedorBindingNavigator);
+            this.Name = "FormVendedor";
+            this.Text = "Vendedor";
+            ((System.ComponentModel.ISupportInitialize)(this.listaVendedorBindingNavigator)).EndInit();
+            this.listaVendedorBindingNavigator.ResumeLayout(false);
+            this.listaVendedorBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaVendedorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,11 +328,9 @@
 
         #endregion
 
-        private System.Windows.Forms.BindingSource listaMaquillajeBindingSource;
-        private System.Windows.Forms.BindingNavigator listaMaquillajeBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.BindingSource listaVendedorBindingSource;
+        private System.Windows.Forms.BindingNavigator listaVendedorBindingNavigator;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -340,12 +339,14 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton listaMaquillajeBindingNavigatorSaveItem;
-        private System.Windows.Forms.CheckBox activoCheckBox;
-        private System.Windows.Forms.TextBox descripcionTextBox;
-        private System.Windows.Forms.TextBox existenciaTextBox;
-        private System.Windows.Forms.TextBox idTextBox;
-        private System.Windows.Forms.TextBox precioTextBox;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton listaVendedorBindingNavigatorSaveItem;
         private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
+        private System.Windows.Forms.CheckBox activoCheckBox;
+        private System.Windows.Forms.TextBox areaTextBox;
+        private System.Windows.Forms.TextBox cargoTextBox;
+        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.TextBox nombreTextBox;
     }
 }
