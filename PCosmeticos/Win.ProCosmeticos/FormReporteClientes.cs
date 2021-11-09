@@ -11,17 +11,16 @@ using System.Windows.Forms;
 
 namespace Win.ProCosmeticos
 {
-    public partial class FormReporteProductos : Form
+    public partial class FormReporteClientes : Form
     {
-        public FormReporteProductos()
+        public FormReporteClientes()
         {
             InitializeComponent();
-
-            var _productoBL = new ProductosBL();
+            var _clientesBL = new ClientesBL();
             var bindingSource = new BindingSource();
-            bindingSource.DataSource = _productoBL.ObtenerProductos();
+            bindingSource.DataSource = _clientesBL.ObtenerCliente();
 
-            var reporte = new ReporteProductos();
+            var reporte = new ReporteClientes();
             reporte.SetDataSource(bindingSource);
 
             crystalReportViewer1.ReportSource = reporte;

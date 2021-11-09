@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,44 +10,45 @@ namespace BL.Cosmeticos
 {
     public class ClientesBL
     {
+        Contexto _contexto;
         public BindingList<Cliente> ListaClientes {  get;   set;}
 
         public ClientesBL()
         {
+            _contexto = new Contexto();
             ListaClientes = new BindingList<Cliente>();
 
-            var cliente1 = new Cliente ();
-            cliente1.Id = 1;
-            cliente1.Nombre = "Maria Corrales";
-            cliente1.Activo = true;
-
-            ListaClientes.Add(cliente1);
-
-            var cliente2 = new Cliente();
-            cliente2.Id = 2;
-            cliente2.Nombre = "Sandra Mejia";
-            cliente2.Activo = true;
-
-            ListaClientes.Add(cliente2);
+          
 
         }
         public BindingList<Cliente> ObtenerCliente()
         {
+            _contexto.Clientes.Load();
+            ListaClientes = _contexto.Clientes.Local.ToBindingList();
             return ListaClientes;
         }
-        public bool GuardarCliente(Cliente cliente)
+        public resultado GuardarCliente(Cliente cliente)
         {
-            if (cliente.Id == 0)
+            var resultado = validar(cliente);
+            if (resultado.Exitoso == false)
+
             {
-                cliente.Id = ListaClientes.Max(item => item.Id) + 1;
+                return resultado;
             }
-            return true;
+
+            _contexto.SaveChanges();
+
+            resultado.Exitoso = true;
+            return resultado;
+            
         }
+
         public void AgregarCliente()
         {
             var nuevoCliente = new Cliente();
             ListaClientes.Add(nuevoCliente);
         }
+
         public bool EliminarCliente(int id)
         {
             foreach (var cliente in ListaClientes)
@@ -54,15 +56,17 @@ namespace BL.Cosmeticos
                 if (cliente.Id == id)
                 {
                     ListaClientes.Remove(cliente);
+                    _contexto.SaveChanges();
                     return true;
                 }
 
             }
             return false;
         }
-        private Resultado validar(Cliente cliente)
+
+        private resultado validar(Cliente cliente)
         {
-            var resultado = new Resultado();
+            var resultado = new resultado();
             resultado.Exitoso = true;
 
             if(cliente == null)
@@ -75,10 +79,20 @@ namespace BL.Cosmeticos
 
             if (string.IsNullOrEmpty(cliente.Nombre) == true)
             {
-                resultado.Mensaje = "Ingrese el Nombre del Cliente.";
+                resultado.Mensaje = "Ingrese un Nombre";
                 resultado.Exitoso = false;
-
             }
+            if (cliente.celular < 0)
+            {
+                resultado.Mensaje = "Por Favor ingrese un número de celular";
+                resultado.Exitoso = false;
+            }
+            if (string.IsNullOrEmpty(cliente.Direccion) == true)
+            {
+                resultado.Mensaje = "Agregue una dirección";
+                resultado.Exitoso = false;
+            }
+
             return resultado;
         }
     }
@@ -86,7 +100,14 @@ namespace BL.Cosmeticos
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
+        public double celular { get; set; }
+        public string Direccion { get; set; }
         public bool Activo { get; set; }
 
+    }
+    public class resultado             //Se creo la clase de Resultado//
+    {
+        public bool Exitoso { get; set; }
+        public string Mensaje { get; set; }
     }
 }

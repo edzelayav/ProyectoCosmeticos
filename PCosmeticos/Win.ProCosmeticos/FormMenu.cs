@@ -95,12 +95,7 @@ namespace Win.ProCosmeticos
            
         }
 
-        private void reporteClientesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var reporteClientes = new ReporteClientes();
-            reporteClientes.MdiParent = this;
-            reporteClientes.Show();
-        }
+        
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -131,6 +126,12 @@ namespace Win.ProCosmeticos
             var formReporteFacturas = new FormReporteFacturas();
             formReporteFacturas.MdiParent = this;
             formReporteFacturas.Show();
+        }
+        private void reporteClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteClientes = new FormReporteClientes();
+            formReporteClientes.MdiParent = this;
+            formReporteClientes.Show();
         }
     }
 }

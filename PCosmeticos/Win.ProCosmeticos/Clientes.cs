@@ -66,13 +66,15 @@ namespace Win.ProCosmeticos
 
             var resultado = _clientes.GuardarCliente(cliente);
 
-            if (resultado == true)
+            if (resultado.Exitoso == true)
             {
                 listaClientesBindingSource.ResetBindings(false);
+                DeshabilitarHabilitarBottones(true);
+                MessageBox.Show("Cliente guardado");
             }
             else
             {
-                MessageBox.Show("Ocurrio un error guardando cliente");
+                MessageBox.Show(resultado.Mensaje);
             }
         }
 
@@ -80,24 +82,65 @@ namespace Win.ProCosmeticos
         {
             _clientes.AgregarCliente();
             listaClientesBindingSource.MoveLast();
+            DeshabilitarHabilitarBottones(false);
+        }
+
+        private void DeshabilitarHabilitarBottones(bool valor)  // Función para deshabilitar botones en el menú//
+        {
+            bindingNavigatorMoveFirstItem.Enabled = valor;
+            bindingNavigatorMoveLastItem.Enabled = valor;
+            bindingNavigatorMovePreviousItem.Enabled = valor;
+            bindingNavigatorMoveNextItem.Enabled = valor;
+            bindingNavigatorPositionItem.Enabled = valor;
+
+            bindingNavigatorAddNewItem.Enabled = valor;
+            bindingNavigatorDeleteItem.Enabled = valor;
+            toolStripButtonCancelar.Visible = !valor;
         }
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            var id = Convert.ToInt32(idTextBox.Text);
+            if (idTextBox.Text != "")           //Función para que no tire error cuando este vacio//
+            {
+                var resultado = MessageBox.Show("Desea eliminar este Cliente?", "Eliminar", MessageBoxButtons.YesNo);
+
+                if (resultado == DialogResult.Yes)
+                {
+                    var id = Convert.ToInt32(idTextBox.Text);
+                    Eliminar(id);
+                }
+
+            }
+
+
+        }
+
+        private void Eliminar(int id)
+        {
             var resultado = _clientes.EliminarCliente(id);
 
-            if  (resultado == true)
+            if (resultado == true)                                     //Si el resultado es verdadero resetea o refresca la lista//
             {
                 listaClientesBindingSource.ResetBindings(false);
             }
             else
             {
-                MessageBox.Show("Ocurrio un error al eliminar cliente");
+                MessageBox.Show("Error al eliminar el Cliente");    // Muestra un mensaje de error//
             }
         }
 
         private void Clientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButtonCancelar_Click(object sender, EventArgs e)
+        {
+            DeshabilitarHabilitarBottones(true);
+            Eliminar(0);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

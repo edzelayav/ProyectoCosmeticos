@@ -37,6 +37,26 @@ namespace BL.Cosmeticos
             categoria4.Descripcion = "Aceites";
             contexto.Categorias.Add(categoria4);
 
+            var categoria5 = new Categoria();
+            categoria5.Descripcion = "Labiales";
+            contexto.Categorias.Add(categoria5);
+
+            var categoria6 = new Categoria();
+            categoria6.Descripcion = "Sombras";
+            contexto.Categorias.Add(categoria6);
+
+            var categoria7 = new Categoria();
+            categoria7.Descripcion = "Bases";
+            contexto.Categorias.Add(categoria7);
+
+            var categoria8 = new Categoria();
+            categoria8.Descripcion = "Rimel";
+            contexto.Categorias.Add(categoria8);
+
+            var categoria9 = new Categoria();
+            categoria9.Descripcion = "Polvos";
+            contexto.Categorias.Add(categoria9);
+
             var tipo1 = new Tipo();
             tipo1.Descripcion = "Productos Faciales";
             contexto.Tipos.Add(tipo1);
