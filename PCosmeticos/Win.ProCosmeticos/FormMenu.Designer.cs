@@ -59,7 +59,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(610, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(610, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -68,12 +68,14 @@
             this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loginToolStripMenuItem,
             this.salirToolStripMenuItem});
+            this.seguridadToolStripMenuItem.Image = global::Win.ProCosmeticos.Properties.Resources.Segurity;
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
             this.seguridadToolStripMenuItem.Text = "Seguridad";
             // 
             // loginToolStripMenuItem
             // 
+            this.loginToolStripMenuItem.Image = global::Win.ProCosmeticos.Properties.Resources.login;
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.loginToolStripMenuItem.Text = "Login";
@@ -81,6 +83,7 @@
             // 
             // salirToolStripMenuItem
             // 
+            this.salirToolStripMenuItem.Image = global::Win.ProCosmeticos.Properties.Resources.LogOut;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.salirToolStripMenuItem.Text = "Salir";
@@ -91,12 +94,14 @@
             this.cosmeticosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.productosLimpiezaFacialToolStripMenuItem,
             this.facturaToolStripMenuItem});
+            this.cosmeticosToolStripMenuItem.Image = global::Win.ProCosmeticos.Properties.Resources.Cosmeticos;
             this.cosmeticosToolStripMenuItem.Name = "cosmeticosToolStripMenuItem";
-            this.cosmeticosToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.cosmeticosToolStripMenuItem.Size = new System.Drawing.Size(101, 24);
             this.cosmeticosToolStripMenuItem.Text = "Cosmeticos";
             // 
             // productosLimpiezaFacialToolStripMenuItem
             // 
+            this.productosLimpiezaFacialToolStripMenuItem.Image = global::Win.ProCosmeticos.Properties.Resources.productos;
             this.productosLimpiezaFacialToolStripMenuItem.Name = "productosLimpiezaFacialToolStripMenuItem";
             this.productosLimpiezaFacialToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.productosLimpiezaFacialToolStripMenuItem.Text = "Productos ";
@@ -104,6 +109,7 @@
             // 
             // facturaToolStripMenuItem
             // 
+            this.facturaToolStripMenuItem.Image = global::Win.ProCosmeticos.Properties.Resources.factura;
             this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
             this.facturaToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.facturaToolStripMenuItem.Text = "Factura";
@@ -113,15 +119,17 @@
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.idDeClienteToolStripMenuItem});
+            this.clientesToolStripMenuItem.Image = global::Win.ProCosmeticos.Properties.Resources.Clientes;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // idDeClienteToolStripMenuItem
             // 
+            this.idDeClienteToolStripMenuItem.Image = global::Win.ProCosmeticos.Properties.Resources.informacion;
             this.idDeClienteToolStripMenuItem.Name = "idDeClienteToolStripMenuItem";
-            this.idDeClienteToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.idDeClienteToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.idDeClienteToolStripMenuItem.Text = "Informacion de Cliente";
             this.idDeClienteToolStripMenuItem.Click += new System.EventHandler(this.idDeClienteToolStripMenuItem_Click);
             // 
@@ -129,12 +137,14 @@
             // 
             this.vendedorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nombreDeVendedorToolStripMenuItem});
+            this.vendedorToolStripMenuItem.Image = global::Win.ProCosmeticos.Properties.Resources.Vendedor;
             this.vendedorToolStripMenuItem.Name = "vendedorToolStripMenuItem";
-            this.vendedorToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.vendedorToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.vendedorToolStripMenuItem.Text = "Vendedor";
             // 
             // nombreDeVendedorToolStripMenuItem
             // 
+            this.nombreDeVendedorToolStripMenuItem.Image = global::Win.ProCosmeticos.Properties.Resources.informacion1;
             this.nombreDeVendedorToolStripMenuItem.Name = "nombreDeVendedorToolStripMenuItem";
             this.nombreDeVendedorToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.nombreDeVendedorToolStripMenuItem.Text = "Información de Vendedor";
@@ -147,35 +157,40 @@
             this.reporteClientesToolStripMenuItem,
             this.reporteDeFacturasToolStripMenuItem,
             this.reporteDeVendedorToolStripMenuItem});
+            this.reportesToolStripMenuItem.Image = global::Win.ProCosmeticos.Properties.Resources.reporte;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // reporteDeProductosToolStripMenuItem
             // 
+            this.reporteDeProductosToolStripMenuItem.Image = global::Win.ProCosmeticos.Properties.Resources.reportecfv;
             this.reporteDeProductosToolStripMenuItem.Name = "reporteDeProductosToolStripMenuItem";
-            this.reporteDeProductosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.reporteDeProductosToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.reporteDeProductosToolStripMenuItem.Text = "Reporte de Productos";
             this.reporteDeProductosToolStripMenuItem.Click += new System.EventHandler(this.reporteDeProductosToolStripMenuItem_Click);
             // 
             // reporteClientesToolStripMenuItem
             // 
+            this.reporteClientesToolStripMenuItem.Image = global::Win.ProCosmeticos.Properties.Resources.reportecfv1;
             this.reporteClientesToolStripMenuItem.Name = "reporteClientesToolStripMenuItem";
-            this.reporteClientesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.reporteClientesToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.reporteClientesToolStripMenuItem.Text = "Reporte Clientes";
             this.reporteClientesToolStripMenuItem.Click += new System.EventHandler(this.reporteClientesToolStripMenuItem_Click);
             // 
             // reporteDeFacturasToolStripMenuItem
             // 
+            this.reporteDeFacturasToolStripMenuItem.Image = global::Win.ProCosmeticos.Properties.Resources.Reportefactura;
             this.reporteDeFacturasToolStripMenuItem.Name = "reporteDeFacturasToolStripMenuItem";
-            this.reporteDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.reporteDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.reporteDeFacturasToolStripMenuItem.Text = "Reporte de Facturas";
             this.reporteDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeFacturasToolStripMenuItem_Click);
             // 
             // reporteDeVendedorToolStripMenuItem
             // 
+            this.reporteDeVendedorToolStripMenuItem.Image = global::Win.ProCosmeticos.Properties.Resources.reportecfv2;
             this.reporteDeVendedorToolStripMenuItem.Name = "reporteDeVendedorToolStripMenuItem";
-            this.reporteDeVendedorToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.reporteDeVendedorToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.reporteDeVendedorToolStripMenuItem.Text = "Reporte de Vendedor";
             this.reporteDeVendedorToolStripMenuItem.Click += new System.EventHandler(this.reporteDeVendedorToolStripMenuItem_Click);
             // 
