@@ -170,7 +170,21 @@ namespace Win.ProCosmeticos
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
+            
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string buscar = textBox1.Text;
+            if (buscar != "")
+            {
+                listaProductosBindingSource.DataSource = _productos.ObtenerProductos(buscar);
+            }
+            else
+            {
+                listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
+            }
+            listaProductosBindingSource.ResetBindings(false);
         }
     }
 }

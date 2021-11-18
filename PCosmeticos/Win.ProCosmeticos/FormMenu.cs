@@ -29,6 +29,8 @@ namespace Win.ProCosmeticos
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
 
+            toolStripStatusLabel1.Text = "Usuario: " + Utilidades.NombreUsuario;
+
         }
 
         private void productosLimpiezaFacialToolStripMenuItem_Click(object sender, EventArgs e)
