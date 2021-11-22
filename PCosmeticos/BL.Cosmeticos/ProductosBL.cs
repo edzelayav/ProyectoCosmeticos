@@ -28,7 +28,7 @@ namespace BL.Cosmeticos
             return ListaProductos;
         }
 
-        public BindingList<Producto> ObtenerProductos(string buscar)
+        public BindingList<Producto> ObtenerProductos(string buscar)//
         {
             var resultado = _contexto.Productos.Where(r => r.Descripcion.Contains(buscar));
            
